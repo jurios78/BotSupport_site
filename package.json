@@ -2,11 +2,6 @@
   "name": "botsupport-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.2.0"
+    "build": "echo 'No build required' && exit 0"
   }
 }
