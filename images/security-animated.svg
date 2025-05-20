@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <style>
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 0; }
+    }
+    .shield { animation: pulse 3s infinite ease-in-out; }
+    .gear { animation: rotate 10s infinite linear; transform-origin: center; }
+    .lock { animation: float 4s infinite ease-in-out; }
+    .path { stroke-dasharray: 500; stroke-dashoffset: 500; animation: dash 3s linear forwards; }
+  </style>
+  
+  <!-- Background Circle -->
+  <circle cx="200" cy="150" r="130" fill="#e3f2fd" />
+  
+  <!-- Shield -->
+  <g class="shield">
+    <path d="M200,60 L260,90 L260,150 C260,190 235,220 200,240 C165,220 140,190 140,150 L140,90 Z" fill="#1976d2" opacity="0.9" />
+    <path d="M200,80 L245,100 L245,150 C245,180 225,205 200,220 C175,205 155,180 155,150 L155,100 Z" fill="#2196f3" />
+  </g>
+  
+  <!-- Gear -->
+  <g class="gear" transform="translate(320, 70)">
+    <circle cx="0" cy="0" r="20" fill="#90caf9" />
+    <path d="M0,-30 L5,-20 L15,-25 L15,-15 L25,-10 L20,0 L25,10 L15,15 L15,25 L5,20 L0,30 L-5,20 L-15,25 L-15,15 L-25,10 L-20,0 L-25,-10 L-15,-15 L-15,-25 L-5,-20 Z" fill="#64b5f6" />
+  </g>
+  
+  <!-- Lock -->
+  <g class="lock" transform="translate(200, 150)">
+    <rect x="-25" y="-10" width="50" height="40" rx="5" fill="#1565c0" />
+    <circle cx="0" cy="-10" r="15" fill="none" stroke="#1565c0" stroke-width="8" />
+    <circle cx="0" cy="5" r="8" fill="#ffffff" />
+    <rect x="-2" y="5" width="4" height="15" fill="#ffffff" />
+  </g>
+  
+  <!-- Data Lines -->
+  <g>
+    <path class="path" d="M80,120 C120,100 150,130 180,110" stroke="#42a5f5" stroke-width="3" fill="none" />
+    <path class="path" d="M80,150 C120,170 150,140 180,160" stroke="#42a5f5" stroke-width="3" fill="none" />
+    <path class="path" d="M220,110 C250,130 280,100 320,120" stroke="#42a5f5" stroke-width="3" fill="none" />
+    <path class="path" d="M220,160 C250,140 280,170 320,150" stroke="#42a5f5" stroke-width="3" fill="none" />
+  </g>
+  
+  <!-- Small Circles -->
+  <circle cx="80" cy="120" r="5" fill="#0d47a1" />
+  <circle cx="80" cy="150" r="5" fill="#0d47a1" />
+  <circle cx="320" cy="120" r="5" fill="#0d47a1" />
+  <circle cx="320" cy="150" r="5" fill="#0d47a1" />
+  
+  <!-- Checkmark -->
+  <path class="path" d="M185,150 L195,165 L215,135" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
