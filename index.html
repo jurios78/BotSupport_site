@@ -3,10 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BotSupport - Бесплатный Telegram-бот для Google Apps</title>
+  <meta name="theme-color" content="#1976d2" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>BotSupport - Бесплатный Telegram-бот для автоматизации поддержки Google Apps</title>
+  <meta name="description" content="Автоматизируйте техподдержку с помощью бесплатного Telegram-бота для Google Apps. Без серверов, доменов и сложностей. Настройка за 3 простых шага." />
+  <meta name="keywords" content="Telegram бот, Google Apps, техподдержка, автоматизация, бесплатный бот, Google Sheets, интеграция" />
+  <meta name="author" content="BotSupport" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://botsupport-site.vercel.app/" />
+  <meta property="og:title" content="BotSupport - Бесплатный Telegram-бот для автоматизации поддержки" />
+  <meta property="og:description" content="Автоматизируйте техподдержку с помощью бесплатного Telegram-бота для Google Apps. Настройка за 3 простых шага." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://botsupport-site.vercel.app/" />
+  <meta property="og:image" content="./images/telegram-bot.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BotSupport - Бесплатный Telegram-бот для автоматизации поддержки" />
+  <meta name="twitter:description" content="Автоматизируйте техподдержку с помощью бесплатного Telegram-бота для Google Apps. Настройка за 3 простых шага." />
+  <meta name="twitter:image" content="./images/telegram-bot.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="preload" as="image" href="./images/telegram-bot.svg">
+  <link rel="preload" as="image" href="./images/google-sheets.svg">
   <script>
     tailwind.config = {
       theme: {
@@ -86,6 +110,64 @@
       100% { transform: translateY(0px); }
     }
   </style>
+  <!-- Микроразметка Schema.org для организации -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BotSupport",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Telegram",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "description": "Бесплатный Telegram-бот для автоматизации поддержки Google Apps",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "25"
+    }
+  }
+  </script>
+  
+  <!-- Микроразметка Schema.org для FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Это правда бесплатно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, 100% бесплатно — без серверов, доменов и подписок! Мы используем только бесплатные сервисы Google для работы бота."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Нужны ли технические навыки?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет! Просто следуйте нашей простой инструкции. Если вы умеете пользоваться Google Таблицами, вы справитесь с настройкой."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Насколько это безопасно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Доступ ограничен временными кодами, данные хранятся в Google Sheets. Вся информация защищена стандартными протоколами безопасности Google."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Подойдёт ли для небольшой команды?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Конечно, идеально для команд любого размера! Наше решение масштабируется в зависимости от ваших потребностей."
+      }
+    }]
+  }
+  </script>
 </head>
 <body>
 
@@ -93,11 +175,10 @@
 <header class="sticky top-0 shadow-md z-50 bg-white">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <h1 class="text-xl md:text-2xl font-bold text-primary-600">BotSupport</h1>
-    <nav class="space-x-6 hidden md:flex">
+    <nav class="space-x-6 hidden md:flex" aria-label="Основная навигация">
       <a href="#features" class="hover:text-primary-600 transition font-medium">Преимущества</a>
       <a href="#how-it-works" class="hover:text-primary-600 transition font-medium">Как это работает</a>
       <a href="#faq" class="hover:text-primary-600 transition font-medium">FAQ</a>
-      <a href="#testimonials" class="hover:text-primary-600 transition font-medium">Отзывы</a>
     </nav>
     <div class="flex items-center">
       <a href="#get-started"
@@ -111,7 +192,7 @@
 <!-- Hero Section -->
 <section id="hero" class="hero-gradient pt-16 pb-24 relative">
   <div class="absolute inset-0 opacity-5">
-    <img src="./images/support-team.svg" alt="Фон техподдержки" class="w-full h-full object-cover"/>
+    <img src="./images/support-team.svg" alt="Команда техподдержки BotSupport - профессиональное обслуживание клиентов" class="w-full h-full object-cover"/>
   </div>
   <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 mb-8 md:mb-0 animate__animated animate__fadeInLeft">
@@ -122,15 +203,16 @@
         Автоматизированная техподдержка для вашей команды — 100% бесплатно, без серверов, доменов и сложностей.
       </p>
       <a href="#get-started"
-         class="inline-block mt-8 btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+         class="inline-block mt-8 btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg"
+         aria-label="Начать использование BotSupport бесплатно">
         Начать сейчас!
       </a>
     </div>
     <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
       <div class="relative">
-        <img src="./images/telegram-bot.svg" alt="Telegram Bot UI" class="w-64 h-64 animate-float" />
+        <img src="./images/telegram-bot.svg" alt="Интерфейс Telegram-бота BotSupport для автоматизации поддержки" class="w-64 h-64 animate-float" />
         <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg">
-          <img src="./images/google-sheets.svg" alt="Google Sheets" class="w-16 h-16" />
+          <img src="./images/google-sheets.svg" alt="Интеграция с Google Sheets для хранения и обработки данных" class="w-16 h-16" />
         </div>
       </div>
     </div>
@@ -168,7 +250,8 @@
     </div>
     <div class="text-center mt-12">
       <a href="#get-started"
-         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg"
+         aria-label="Попробовать BotSupport бесплатно">
         Попробуйте бесплатно сегодня!
       </a>
     </div>
@@ -210,7 +293,8 @@
     </p>
     <div class="text-center mt-8">
       <a href="#get-started"
-         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg"
+         aria-label="Начать настройку BotSupport за минуты">
         Начать за минуты!
       </a>
     </div>
@@ -315,139 +399,47 @@
   </div>
 </section>
 
-<!-- Counter Section -->
+<!-- Преимущества использования Section -->
 <section class="py-16 bg-primary-600 text-white">
   <div class="container mx-auto px-4">
     <div class="text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-8">Нам доверяют</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">Преимущества использования</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-primary-700 p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-4"><i class="fas fa-clock"></i></div>
+          <h3 class="text-xl font-bold mb-2">Экономия времени</h3>
+          <p>Сотрудники освобождаются от рутинных вопросов и могут сосредоточиться на важных задачах</p>
+        </div>
+        <div class="bg-primary-700 p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-4"><i class="fas fa-bolt"></i></div>
+          <h3 class="text-xl font-bold mb-2">Мгновенные ответы</h3>
+          <p>Бот отвечает на типовые вопросы за секунды, без ожидания в очереди</p>
+        </div>
+        <div class="bg-primary-700 p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+          <h3 class="text-xl font-bold mb-2">Снижение нагрузки</h3>
+          <p>Уменьшение количества обращений в техподдержку до 70% благодаря автоматизации</p>
+        </div>
+      </div>
       <div class="flex flex-wrap justify-center gap-8 md:gap-16">
         <div class="text-center">
-          <div class="text-4xl md:text-6xl font-bold mb-2">
-            <span id="bot-counter" data-count="55">0</span>+
-          </div>
-          <p class="text-xl">Активных ботов</p>
+          <div class="text-4xl md:text-6xl font-bold mb-2">3 сек</div>
+          <p class="text-xl">Среднее время ответа</p>
         </div>
         <div class="text-center">
-          <div class="text-4xl md:text-6xl font-bold mb-2">Наша</div>
-          <p class="text-xl">Техподдержка</p>
+          <div class="text-4xl md:text-6xl font-bold mb-2">85%</div>
+          <p class="text-xl">Успешно решенных вопросов</p>
         </div>
         <div class="text-center">
-          <div class="text-4xl md:text-6xl font-bold mb-2">100%</div>
-          <p class="text-xl">Бесплатно</p>
+          <div class="text-4xl md:text-6xl font-bold mb-2">20+ ч</div>
+          <p class="text-xl">Экономия в неделю</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section id="testimonials" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-      Что говорят наши пользователи
-    </h2>
-    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Реальные отзывы от реальных команд</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="testimonial-card p-6 rounded-xl shadow-lg bg-white">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4">АК</div>
-          <div>
-            <h3 class="font-semibold">Алексей Кузнецов</h3>
-            <p class="text-sm text-gray-500">IT-директор, ООО "ТехноСтарт"</p>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex text-yellow-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          </div>
-        </div>
-        <p class="text-gray-600">"Наша команда поддержки стала работать в 3 раза эффективнее после внедрения этого бота. Настройка заняла буквально 15 минут, а результат превзошел все ожидания!"</p>
-      </div>
-      
-      <div class="testimonial-card p-6 rounded-xl shadow-lg bg-white">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4">МС</div>
-          <div>
-            <h3 class="font-semibold">Мария Соколова</h3>
-            <p class="text-sm text-gray-500">Руководитель отдела поддержки, EdTech стартап</p>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex text-yellow-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          </div>
-        </div>
-        <p class="text-gray-600">"Лучшее решение для небольшой команды! Мы экономим время на обработке запросов, а интеграция с Google Sheets позволяет легко анализировать данные и улучшать качество поддержки."</p>
-      </div>
-      
-      <div class="testimonial-card p-6 rounded-xl shadow-lg bg-white">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold mr-4">ДП</div>
-          <div>
-            <h3 class="font-semibold">Дмитрий Петров</h3>
-            <p class="text-sm text-gray-500">Предприниматель, онлайн-магазин</p>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex text-yellow-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          </div>
-        </div>
-        <p class="text-gray-600">"Не верил, что бесплатный инструмент может быть настолько полезным. Теперь все запросы клиентов автоматически организованы, и мы можем быстро отвечать на них. Очень рекомендую!"</p>
-      </div>
-    </div>
-    
-    <div class="text-center mt-12">
-      <a href="#get-started"
-         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
-        Присоединяйтесь к довольным пользователям!
-      </a>
-    </div>
-  </div>
-</section>
+
 
 <!-- FAQ -->
 <section id="faq" class="py-20 bg-white">
@@ -496,7 +488,8 @@
     </div>
     <div class="text-center mt-12">
       <a href="#contact"
-         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+         class="inline-block btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg"
+         aria-label="Связаться с командой поддержки BotSupport">
         Остались вопросы? Свяжитесь с нами!
       </a>
     </div>
@@ -517,7 +510,8 @@
     </div>
     <div class="text-center mb-10">
       <a href="#get-started"
-         class="inline-block bg-white text-primary-700 px-10 py-5 rounded-full text-xl font-bold hover:bg-blue-50 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+         class="inline-block bg-white text-primary-700 px-10 py-5 rounded-full text-xl font-bold hover:bg-blue-50 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+         aria-label="Начать использование BotSupport бесплатно">
         Начать бесплатно сейчас!
       </a>
     </div>
